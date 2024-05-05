@@ -7,13 +7,13 @@
     <title>Form Project</title>
   </head>
   <body>
-    <h1>Form Project</h1>
+    <h1 id="title">Form Project</h1>
     <h3>Welcome to our event registration form!</h3>
     <p>
       Thank you for your interest in attending our upcoming event! Please take a
       moment to complete the registration form below to secure your spot.
     </p>
-    <p>
+    <p id="description">
       This form is designed to collect essential information from you to ensure
       a smooth registration process and to provide you with the best experience
       possible at our event.
@@ -23,11 +23,17 @@
       information or special requests in the comments section at the end of the
       form.
     </p>
-    <form action="" method="post">
+    <form id="survey-form" action="" method="post">
       <fieldset>
-        <label for="">Full name: <input type="text" /></label>
-        <label for="">Email: <input type="email" /></label>
-        <label for="">Phone number: <input type="number" /></label>
+        <label for="name" id="name-label"
+          >Full name: <input id="name" type="text" required
+        /></label>
+        <label for="email" id="email-label"
+          >Email: <input id="email" type="email" required
+        /></label>
+        <label for="number" id="number-label"
+          >Phone number: <input id="number" type="number" min="9" max="10"
+        /></label>
       </fieldset>
       <fieldset>
         <label for="">Company name: <input type="text" /></label>
