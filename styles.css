@@ -16,6 +16,7 @@ p {
 
 form {
   margin: 0 auto;
+  margin-bottom: 30px;
   /* to center the form in the middle of the page */
   max-width: 700px;
   min-width: 350px;
