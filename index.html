@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- These are required to view and run the code -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- This is required to link the styles.css file and aply the styles in the page -->
     <link rel="stylesheet" href="styles.css" />
     <title>Form Project</title>
   </head>
   <body>
+    <!-- This section functions as an introduction about the form, we start with the h1 because it serves as the title of the whole page -->
     <h1 id="title">Form Project</h1>
+    <!-- I did use the h3 to have it bigger than the rest of the text -->
     <h3>Welcome to our event registration form!</h3>
     <p>
       Thank you for your interest in attending our upcoming event! Please take a
       moment to complete the registration form below to secure your spot.
     </p>
+    <!-- This element explains the objective behind the form -->
     <p id="description">
       This form is designed to collect essential information from you to ensure
       a smooth registration process and to provide you with the best experience
@@ -23,35 +28,73 @@
       information or special requests in the comments section at the end of the
       form.
     </p>
+    <!-- Here the form starts, it's divided in various sections -->
     <form id="survey-form" action="" method="post">
+      <!-- 1. First Section: Personal Info. about the attendants. We use the fieldset element for the various sections in the form -->
       <fieldset>
+        <!-- Each fieldset requires labels and input elements (connected), they function as titles/instructions and data entry elements -->
+        <!-- The labels and inputs are connected with the 'for' attribute on the label and the 'id' attribute on the input -->
         <label for="name" id="name-label"
-          >Full name: <input id="name" type="text" required
+          >Full name:
+          <input id="name" type="text" required placeholder="full name"
         /></label>
+        <!-- In this one, because it's an email, we treat it like it, the type attribute is set to email, what this does is that it checks that the value entered is a valid email direction, if we put anything else the page shows an error message -->
         <label for="email" id="email-label"
-          >Email: <input id="email" type="email" required
+          >Email:
+          <input id="email" type="email" required placeholder="email direction"
         /></label>
+        <!-- In this specific label-input, because we need a telephone number, we put the type attribute with the value of number, also because we don't want any random value, we ensure that the user enters a number that is at least 9 characters minimum and 10 characters max -->
         <label for="number" id="number-label"
-          >Phone number: <input id="number" type="number" min="9" max="10"
+          >Phone number:
+          <input
+            id="number"
+            type="number"
+            min="9"
+            max="10"
+            placeholder="phone number"
         /></label>
       </fieldset>
+      <!-- 2. Second Section: Professional Info. about the attendants. -->
       <fieldset>
         <label for="">Company name: <input type="text" /></label>
         <label for="">Current position: <input type="text" /></label>
-        <label for="">Session preferences: <input type="text" /></label>
       </fieldset>
+      <!-- 3. Third Section: to have the type='checkbox' inputs as requested in the code test -->
       <fieldset>
-        <label for="referrer"
+        <!-- We use the legend element in this case because it's the correct semantic way, to show the question before the checkboxes -->
+        <legend>Which panel are you most interested in?</legend>
+        <label for=""
+          ><input name="prefer" type="checkbox" value="tech" />1.Technology
+          Trends</label
+        >
+        <label for=""
+          ><input
+            name="prefer"
+            type="checkbox"
+            value="startups"
+          />2.Entrepreneurship and Startups</label
+        >
+        <label for=""
+          ><input name="prefer" type="checkbox" value="personal" />3.Personal
+          Development</label
+        >
+      </fieldset>
+      <!-- 4. Fourth Section: About referrers and additional comments/suggestions -->
+      <fieldset>
+        <!-- Here, we set a dropdown menu, with the select element, to put each one of the options, we use the 'option' element -->
+        <label for="dropdown"
           >How did you know about us?
-          <select name="options" id="referrer">
+          <select name="options" id="dropdown">
             <option value="">(Please select one option)</option>
             <option value="1">Social Media</option>
             <option value="2">Newsletter</option>
             <option value="3">Other</option>
           </select></label
         >
+        <!-- Here, we want the user to leave us a comment, so we need a space to have them freely write, it has to be bigger than the rest, so the textarea element is applied -->
         <label for=""
-          >Please leave us a comment:
+          >Please leave us a comment/suggestion:
+          <!-- Here, the cols property is set to 30 columns of text, the rows is set to 10 rows of space -->
           <textarea
             name=""
             id=""
@@ -61,11 +104,40 @@
           ></textarea>
         </label>
       </fieldset>
-      <label for=""
-        ><input type="checkbox" required /> I have read the terms and
-        conditions</label
+      <!-- 5. Fifth Section: last fieldset to practice with some type=radio inputs -->
+      <fieldset>
+        <legend>
+          Would you recommend the event to your colleagues in the future?
+        </legend>
+        <!-- Here we try the type='radio' input, the 'NAME' of each one has to be the same so the webpage only lets the user check one, to prevent a form without this checked we put the 'checked' attribute on the first type='radio' -->
+        <label for=""
+          ><input
+            name="user-recommend"
+            value="definitely"
+            type="radio"
+            checked
+          />Definitely</label
+        >
+        <label for=""
+          ><input
+            name="user-recommend"
+            value="maybe"
+            type="radio"
+          />Maybe</label
+        >
+        <label for=""
+          ><input name="user-recommend" value="not_sure" type="radio" />Not
+          sure</label
+        >
+      </fieldset>
+      <!-- After the last fieldset in the form, we have some elements to submit it -->
+      <!-- This label below, is for the required terms and conditions that we have to ensure the attendants have read -->
+      <label for="submit"
+        ><input type="checkbox" value="read" required /> I have read the terms
+        and conditions</label
       >
-      <input type="submit" value="Submit" />
+      <!-- This input submits the form (because of it's type), the value property value it's what appears inside the button -->
+      <input id="submit" type="submit" value="Submit" />
     </form>
   </body>
 </html>
