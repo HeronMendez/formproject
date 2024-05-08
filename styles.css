@@ -1,0 +1,62 @@
+body {
+  background-color: darkolivegreen;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* This is used to give color to the background of the page and set the font-family */
+  color: white;
+  font-size: large;
+}
+
+h1,
+h3,
+p {
+  margin: 1em auto;
+  text-align: center;
+  /* Used to center the text in the page, also to give some space between lines */
+}
+
+form {
+  margin: 0 auto;
+  /* to center the form in the middle of the page */
+  max-width: 700px;
+  min-width: 350px;
+  width: 60vw;
+  /* To control the size that the form box can take */
+  background-color: rgb(166, 197, 188);
+  /* to better distinguish the form element from the body */
+  color: black;
+  /* so the text is readable according to the background-color on the form */
+  padding: 15px;
+}
+
+fieldset {
+  border: none;
+  /* to eliminate the default borders of the element */
+  padding: 1rem 0;
+  /* to give some space in between the sections of the form */
+  border-bottom: 2px dashed darkslategrey;
+  /* to clearly define where sections end */
+}
+
+label {
+  display: block;
+  /* so every point of the form has a line for itself, they display on top of each other */
+  margin: 0.5rem 0;
+  /* so there's space between each label - question */
+}
+
+legend {
+  padding: 0.5rem 0;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 2em;
+}
+
+.inline {
+  width: unset;
+  vertical-align: middle;
+}

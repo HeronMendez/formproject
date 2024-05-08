@@ -64,19 +64,28 @@
         <!-- We use the legend element in this case because it's the correct semantic way, to show the question before the checkboxes -->
         <legend>Which panel are you most interested in?</legend>
         <label for=""
-          ><input name="prefer" type="checkbox" value="tech" />1.Technology
-          Trends</label
+          ><input
+            class="inline"
+            name="prefer"
+            type="checkbox"
+            value="tech"
+          />1.Technology Trends</label
         >
         <label for=""
           ><input
+            class="inline"
             name="prefer"
             type="checkbox"
             value="startups"
           />2.Entrepreneurship and Startups</label
         >
         <label for=""
-          ><input name="prefer" type="checkbox" value="personal" />3.Personal
-          Development</label
+          ><input
+            class="inline"
+            name="prefer"
+            type="checkbox"
+            value="personal"
+          />3.Personal Development</label
         >
       </fieldset>
       <!-- 4. Fourth Section: About referrers and additional comments/suggestions -->
@@ -99,7 +108,7 @@
             name=""
             id=""
             cols="30"
-            rows="10"
+            rows="5"
             placeholder="Looking forward to meeting you!"
           ></textarea>
         </label>
@@ -112,6 +121,7 @@
         <!-- Here we try the type='radio' input, the 'NAME' of each one has to be the same so the webpage only lets the user check one, to prevent a form without this checked we put the 'checked' attribute on the first type='radio' -->
         <label for=""
           ><input
+            class="inline"
             name="user-recommend"
             value="definitely"
             type="radio"
@@ -120,21 +130,26 @@
         >
         <label for=""
           ><input
+            class="inline"
             name="user-recommend"
             value="maybe"
             type="radio"
           />Maybe</label
         >
         <label for=""
-          ><input name="user-recommend" value="not_sure" type="radio" />Not
-          sure</label
+          ><input
+            class="inline"
+            name="user-recommend"
+            value="not_sure"
+            type="radio"
+          />Not sure</label
         >
       </fieldset>
       <!-- After the last fieldset in the form, we have some elements to submit it -->
       <!-- This label below, is for the required terms and conditions that we have to ensure the attendants have read -->
       <label for="submit"
-        ><input type="checkbox" value="read" required /> I have read the terms
-        and conditions</label
+        ><input class="inline" type="checkbox" value="read" required /> I have
+        read the terms and conditions</label
       >
       <!-- This input submits the form (because of it's type), the value property value it's what appears inside the button -->
       <input id="submit" type="submit" value="Submit" />
